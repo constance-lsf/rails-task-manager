@@ -1,0 +1,21 @@
+<h1>New task</h1>
+
+<%= form_with model: @task do |f| %>
+   <div class="card-body">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="card-body">
+    <%= f.label :details %>
+    <%= f.text_field :details %>
+  </div>
+  <%= f.submit %>
+<% end %>
+
+<div class="end-link">
+  <a class="link-offset-2 link-underline link-underline-opacity-0" href="#">
+    <i class="fa-solid fa-rotate-left"></i>
+    <%= link_to "Back to list", tasks_path %>
+  </a>
+</div>
+
